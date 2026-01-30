@@ -1,0 +1,57 @@
+/* PALETTE */
+
+.bgColor{
+    background-color: #EBEBEB;
+}
+.primaryColor{
+    color: #141414;
+}
+.secondaryColor{
+    color: #737373;
+}
+.accentColor{
+    color: #94E146;
+}
+.softAccentColor{
+    color: #D1E8B9;
+}
+
+/* FONT */
+
+.primaryFont{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.secondaryFont{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* TITOLI, PARAGRAFI, BOTTONI */
+
+h1,h2{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h3{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+p{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;  
+}
+
+/* OTHER */
+
+.borderDeBug{
+    border: solid 3px red;
+}
