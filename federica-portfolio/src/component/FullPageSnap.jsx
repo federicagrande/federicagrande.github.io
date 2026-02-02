@@ -176,8 +176,6 @@ export default function FullPageSnap({ children }) {
         ))}
       </nav>
 
-      {/* small hint */}
-      <div className="fps-hint">Usa scorrimento, frecce ↑↓ o i punti per navigare</div>
     </div>
   );
 }

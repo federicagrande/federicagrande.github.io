@@ -23,12 +23,15 @@
 .fps-section {
   min-height: 100vh;
   height: 100vh;
+  width: 100dvw;
+  min-width: 100dvw;
   scroll-snap-align: start;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 3rem;
   box-sizing: border-box;
+  border:solid 2px red;
 }
 
 /* simple defaults, you can override per-section via className */
@@ -73,22 +76,20 @@
   border-color: #111;
 }
 
-/* hint bottom-left */
-.fps-hint {
-  position: fixed;
-  left: 18px;
-  bottom: 18px;
-  z-index: 60;
-  background: rgba(255,255,255,0.85);
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-size: 13px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+/* Nasconde le scrollbar ma mantiene lo scroll */
+.fps-container {
+  overflow-y: auto;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge legacy */
 }
+
+.fps-container::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari, Edge */
+}
+
 
 /* small responsive tweak: make dot-nav a little smaller on mobile */
 @media (max-width: 560px) {
   .fps-dot { width: 10px; height: 10px; }
   .fps-dot.active { width: 12px; height: 12px; }
-  .fps-hint { font-size: 12px; padding: 6px 10px; }
 }

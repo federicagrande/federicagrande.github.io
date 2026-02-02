@@ -1,4 +1,5 @@
 import './App.css'
+import Ciao from './component/Ciao'
 import FullPageSnap, { SnapSection } from './component/FullPageSnap'
 import PortfolioFederica from './component/portfolioFederica'
 import './component/portfolioFederica.css'
@@ -11,12 +12,14 @@ function App() {
     <FullPageSnap>
 
       <SnapSection>
-      <h1> CIAO </h1>
+       <Ciao />
       </SnapSection>
 
       <SnapSection>
-      <PortfolioFederica/>
+      <p> SALVE </p>
       </SnapSection>
+
+
 
       </FullPageSnap>
     </div>
