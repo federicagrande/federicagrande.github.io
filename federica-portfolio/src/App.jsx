@@ -1,16 +1,26 @@
-import { useState } from 'react'
 import './App.css'
-import './portfolioFederica'
-import './portfolioFederica.css'
+import FullPageSnap, { SnapSection } from './component/FullPageSnap'
+import PortfolioFederica from './component/portfolioFederica'
+import './component/portfolioFederica.css'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="bgColor"> 
-      <PortfolioFederica />
+    <div> 
+    <FullPageSnap>
+
+      <SnapSection>
+      <h1> CIAO </h1>
+      </SnapSection>
+
+      <SnapSection>
+      <PortfolioFederica/>
+      </SnapSection>
+
+      </FullPageSnap>
     </div>
+
       
      
     

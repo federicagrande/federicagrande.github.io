@@ -1,0 +1,94 @@
+/* FullPageSnap.css - CSS puro per comportamento full-page snap */
+
+/* root & container */
+.fps-root {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+}
+
+.fps-container {
+  height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* each section must be full viewport height and snap-start */
+.fps-section {
+  min-height: 100vh;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+/* simple defaults, you can override per-section via className */
+.fps-section h1,
+.fps-section h2 {
+  margin: 0 0 0.5rem 0;
+}
+.fps-section p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* dot navigation (right side) */
+.fps-dots {
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 60;
+}
+
+.fps-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.fps-dot:hover {
+  transform: scale(1.15);
+}
+.fps-dot.active {
+  width: 14px;
+  height: 14px;
+  background: #111;
+  border-color: #111;
+}
+
+/* hint bottom-left */
+.fps-hint {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 60;
+  background: rgba(255,255,255,0.85);
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* small responsive tweak: make dot-nav a little smaller on mobile */
+@media (max-width: 560px) {
+  .fps-dot { width: 10px; height: 10px; }
+  .fps-dot.active { width: 12px; height: 12px; }
+  .fps-hint { font-size: 12px; padding: 6px 10px; }
+}

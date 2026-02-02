@@ -1,8 +1,5 @@
 /* PALETTE */
 
-.bgColor{
-    background-color: #EBEBEB;
-}
 .primaryColor{
     color: #141414;
 }
@@ -55,3 +52,21 @@ p{
 .borderDeBug{
     border: solid 3px red;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 50px;
+    box-sizing: border-box;
+  }
+  
+  .header h3 {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+  }
